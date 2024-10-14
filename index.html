@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, content-scale=1.0">
+    <title>Sistema de Control de Asistencia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sistema de Control de Asistencia de Alumnos</h1>
+    
+    <div id="formulario">
+        <h2>Agregar Alumno</h2>
+        <input type="text" id="nombreAlumno" placeholder="Nombre del Alumno" />
+        <button onclick="agregarAlumno()">Agregar</button>
+    </div>
+
+    <label>
+        <input type="checkbox" id="checkAsistio" onclick="marcarTodos(this)" /> Asistió
+    </label>
+    <table id="tablaAlumnos">
+        <thead>
+            <tr>
+                <th>Número</th>
+                <th>Apellidos y Nombres</th>
+                <th>Día de Asistencia (<span id="fechaActual"></span>)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Las filas se generarán dinámicamente -->
+        </tbody>
+    </table>
+    <button onclick="guardarAsistencia()">Guardar Asistencia</button>
+
+    <div id="resultado"></div>
+<script src="script.js"></script>
+</body>
+</html>
